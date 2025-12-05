@@ -41,16 +41,16 @@ export interface DynamicAnswers {
 }
 
 export const defaultDynamicAnswers: DynamicAnswers = {
-  president: 'Joe Biden',
-  vicePresident: 'Kamala Harris',
+  president: 'Donald Trump',
+  vicePresident: 'JD Vance',
   speakerOfHouse: 'Mike Johnson',
   chiefJustice: 'John Roberts',
   numberOfJustices: 'nine (9)',
-  presidentParty: 'Democratic',
-  senator: '(Answers will vary based on your state)',
-  representative: '(Answers will vary based on your congressional district)',
-  governor: '(Answers will vary based on your state)',
-  stateCapital: '(Answers will vary based on your state)',
+  presidentParty: 'Republican',
+  senator: 'Charles "Chuck" Schumer, Kirsten Gillibrand',
+  representative: 'Jerrold Nadler',
+  governor: 'Kathy Hochul',
+  stateCapital: 'Albany, NY',
 };
 
 export interface UserProgress {
