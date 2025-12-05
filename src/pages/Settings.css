@@ -1,0 +1,281 @@
+.settings {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-bottom: 3rem;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.back-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.settings-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.settings-section {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.settings-section h2 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+}
+
+.section-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Progress Section */
+.progress-overview {
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar-container {
+  height: 12px;
+  background: var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--success));
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.stat-card.mastered .stat-value {
+  color: var(--success);
+}
+
+.stat-card.needs-work .stat-value {
+  color: var(--warning);
+}
+
+.stat-card.learning .stat-value {
+  color: var(--primary);
+}
+
+.progress-tips {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.progress-tips p {
+  margin: 0.25rem 0;
+}
+
+/* Toggle Setting */
+.toggle-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.toggle-info {
+  flex: 1;
+}
+
+.toggle-label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.toggle-description {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-switch {
+  width: 50px;
+  height: 28px;
+  background: var(--border);
+  border-radius: 14px;
+  position: relative;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-input:checked + .toggle-switch {
+  background: var(--primary);
+}
+
+.toggle-input:checked + .toggle-switch::after {
+  transform: translateX(22px);
+}
+
+/* Dynamic Fields */
+.dynamic-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dynamic-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dynamic-field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.dynamic-field input {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+.dynamic-field input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Danger Zone */
+.danger-zone {
+  border: 1px solid var(--accent);
+}
+
+.reset-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background: transparent;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.reset-confirm p {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.confirm-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.confirm-btn.cancel {
+  background: var(--bg);
+  border: 2px solid var(--border);
+  color: var(--text-primary);
+}
+
+.confirm-btn.delete {
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  color: white;
+}
+
+/* About Section */
+.about p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.about .version {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  margin-top: 1rem;
+}
