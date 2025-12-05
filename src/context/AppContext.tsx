@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { AppSettings, UserProgress, DynamicAnswers, defaultDynamicAnswers } from '../data/types';
 
 interface AppContextType {
